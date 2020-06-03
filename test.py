@@ -1,5 +1,5 @@
 import unittest
-from file1 import *
+from all_here import *
 
 
 class MyTestCase(unittest.TestCase):
