@@ -1,0 +1,6 @@
+[submodule "SDT_submodel2"]
+	path = SDT_submodel2
+	url = https://github.com/SummerNeverEnd/SDT_submodel2.git
+[submodule "SDT_submodel"]
+	path = SDT_submodel
+	url = https://github.com/SummerNeverEnd/SDT_submodel.git

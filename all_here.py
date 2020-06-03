@@ -31,6 +31,9 @@ class Text(object):
     def get_text(self):
         return self.text
 
+    def set_text_to_file(self, _n_o_f="output.txt"):
+        with open(_n_o_f, "w") as f:
+            f.write(self.text)
 
 class Editor(object):
 
@@ -53,21 +56,28 @@ class Analyzer(object):
             summary += len(i)
         return float(summary) / float(counter)
 
+    def max_len(self):
+        max_len = 0
+        for i in self.text.text.split():
+            max_len = max(max_len, len(i))
+        return max_len
+
 
 if __name__ == "__main__":
     someText = Text()
-    # someText.get_text_from_console()
-    # someText.print_text()
-    # someText.append_text_from_console()
-    # someText.print_text()
-    # Editor.find_and_replace(someText, "to", "TO")
-    # someText.print_text()
-    # someText.get_text_from_file()
-    # someText.print_text()
-    # someText.append_text_from_file("update.txt")
-    # Editor.find_and_replace(someText, "work", "WORK")
-    # someText.print_text()
+    someText.get_text_from_console()
+    someText.print_text()
+    someText.append_text_from_console()
+    someText.print_text()
+    Editor.find_and_replace(someText, "to", "TO")
+    someText.print_text()
+    someText.get_text_from_file()
+    someText.print_text()
+    someText.append_text_from_file("update.txt")
+    Editor.find_and_replace(someText, "work", "WORK")
+    someText.print_text()
     analyzer = Analyzer(someText)
     someText.set_text_from_arg("a bb ccc")
+    someText.set_text_to_file()
     print(analyzer.avg_word_length())
-print("Hello, World, ")
+
