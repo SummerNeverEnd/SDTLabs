@@ -24,9 +24,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_mode(self):
         some_text = Text()
-        some_text.set_text_from_arg("a bb ccc dd")
+        some_text.set_text_from_arg("a bb ccc ddd")
         some_analyze = Analyzer(some_text)
-        self.assertAlmostEqual(some_analyze.mode(), 2)
+        self.assertAlmostEqual(some_analyze.mode(), 3)
 
 
 if __name__ == '__main__':

@@ -70,7 +70,10 @@ class Analyzer(object):
             else:
                 lengths[len(i)] += 1
         a = lengths.values()
-        return max(a)
+        cur_val = max(a)
+        for i,j in lengths.items():
+            if j == cur_val:
+                return i
 
 
 if __name__ == "__main__":
