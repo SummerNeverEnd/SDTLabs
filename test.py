@@ -22,6 +22,13 @@ class MyTestCase(unittest.TestCase):
         some_analyze = Analyzer(some_text)
         self.assertAlmostEqual(some_analyze.max_len(), 3)
 
+    def test_mode(self):
+        some_text = Text()
+        some_text.set_text_from_arg("a bb ccc dd")
+        some_analyze = Analyzer(some_text)
+        self.assertAlmostEqual(some_analyze.mode(), 2)
+
+
 if __name__ == '__main__':
     unittest.main()
 
