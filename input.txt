@@ -1,0 +1,3 @@
+Hi! I'm text analyzer and I'm going to work!
+But I need your help, you just have to upgrade me!
+EOF
