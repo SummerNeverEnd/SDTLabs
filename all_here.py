@@ -56,6 +56,12 @@ class Analyzer(object):
             summary += len(i)
         return float(summary) / float(counter)
 
+    def max_len(self):
+        max_len = 0
+        for i in self.text.text.split():
+            max_len = max(max_len, len(i))
+        return max_len
+
 
 if __name__ == "__main__":
     someText = Text()
