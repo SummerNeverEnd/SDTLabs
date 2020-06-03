@@ -62,6 +62,16 @@ class Analyzer(object):
             max_len = max(max_len, len(i))
         return max_len
 
+    def mode(self):
+        lengths = {}
+        for i in self.text.text.split():
+            if len(i) not in lengths:
+                lengths[len(i)] = 1
+            else:
+                lengths[len(i)] += 1
+        a = lengths.values()
+        return max(a)
+
 
 if __name__ == "__main__":
     someText = Text()
